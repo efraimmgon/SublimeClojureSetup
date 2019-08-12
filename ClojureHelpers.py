@@ -1,5 +1,6 @@
-import re, sublime, sublime_plugin, sublimerepl, text_transfer
-from sublimerepl import manager
+import re, sublime, sublime_plugin, SublimeREPL
+from SublimeREPL.sublimerepl import manager
+from SublimeREPL import text_transfer
 
 REFRESH_NAMESPACES_CMD = "(let [r 'user/reset] (if (find-var r) ((resolve r)) (clojure.tools.namespace.repl/refresh :after r)))"
 
@@ -166,4 +167,3 @@ class LoadSelectionInReplCommand(text_transfer.ReplSend):
     form = "(load-file \"" + f.name +"\")"
     external_id = repl_external_id(self)
     super( LoadSelectionInReplCommand, self ).run(edit, external_id, form)
-
