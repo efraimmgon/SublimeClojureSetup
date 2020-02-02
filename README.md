@@ -1,4 +1,4 @@
-*NOTE: this is a fork of the original project, which has been updated to work with SUBLIME TEXT 3*
+*NOTE: this is a fork of the original project, which has been updated to work with SUBLIME TEXT 3 and clj deps.*
 
 SublimeClojureSetup
 ===================
