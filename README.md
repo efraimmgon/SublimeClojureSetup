@@ -44,7 +44,7 @@ The Sublime REPL is used to open a REPL within Sublime Text. It can be opened by
 
 __Very Important__: Most of the time you'll want a REPL open for the current project. Sublime REPL only knows to connect the REPL to the current project if you start the REPL with a Clojure file open in the project and your cursor is in it.
 
-Alternatively, if you wish to run the REPL with clj deps, you'll need to  to open the SublimeREPL package and update the contents of `config/Clojure/Default.sublime-commands` and `config/Clojure/Main.sublime-menu` according to this [pull request](https://github.com/wuub/SublimeREPL/pull/537/commits/47bad8803f7eb6a3050ece1e88ea8b37f8e0947e#diff-c699bfc1a6f163eadf899a507a7fcfe4). Then, 
+Alternatively, if you wish to run the REPL with clj deps, you'll need to  to open the SublimeREPL package (`~/Library/Application\ Support/Sublime\ Text\ 3/Packages/SublimeREPL`) and update the contents of `config/Clojure/Default.sublime-commands` and `config/Clojure/Main.sublime-menu` according to this [pull request](https://github.com/wuub/SublimeREPL/pull/537/commits/47bad8803f7eb6a3050ece1e88ea8b37f8e0947e#diff-c699bfc1a6f163eadf899a507a7fcfe4). Then, 
 
   * Invoke the command pallet - __cmd + shift + P__
   * Type `repl` and select __SublimeREPL: Clj__
@@ -96,7 +96,7 @@ Install these packages using the package manager.
 
 Add this code to your user preferences
 
-  * Add the following lines to `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Preferences.sublime-settings`
+  * Add the following lines to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Preferences.sublime-settings`
 
 ```
 // This needs to be disabled since we're using Bracket Highlighter for highlighting brackets
@@ -107,7 +107,7 @@ Add this code to your user preferences
 
 Sublime Text doesn't correctly identify Clojure symbols.
 
-  * Create `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Clojure.sublime-settings` with the following contents.
+  * Create `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Clojure.sublime-settings` with the following contents.
 
 ```
 {
@@ -124,7 +124,7 @@ Sublime Text doesn't correctly identify Clojure symbols.
 
 Clojure uses single quote characters by themselves like `(def my-literal-list '(1 2 3))`. Sublime Text will automatically close single quotes. This becomes annoying when writing Clojure code in sublime text. Turn it off by following these steps:
 
-  * Open `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/Default/Default (OSX).sublime-keymap`
+  * Open `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Default/Default (OSX).sublime-keymap`
   * Search for "Auto-pair single quotes" which should be on line 274 or so.
   * Comment out the block of about 30 lines directly following that comment to disable pairing of single quotes only.
 
@@ -132,7 +132,7 @@ Clojure uses single quote characters by themselves like `(def my-literal-list '(
 
 This file updates SublimeREPL settings so leiningen in on the path. Update this file to include the directory where you installed leiningen.
 
-  * Edit `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/SublimeREPL.sublime-settings` with the following changes
+  * Edit `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/SublimeREPL.sublime-settings` with the following changes
 
 ```
 {
@@ -147,11 +147,11 @@ This file updates SublimeREPL settings so leiningen in on the path. Update this 
 
 The lispindent.sublime-settings defines which forms use function style indentation. I've added additional ones that are typically used in Clojure Applications
 
-    * `cp lispindent.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/`
+    * `cp lispindent.sublime-settings ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
 
 #### Speed up text transfer in SublimeREPL
 
-Change `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/SublimeREPL/config/Clojure/Main.sublime-menu` line 22 from
+Change `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/SublimeREPL/config/Clojure/Main.sublime-menu` line 22 from
 ```
 "osx":  ["lein", "repl"]
 ```
@@ -166,17 +166,17 @@ This greatly improves the speed at which text is sent from a Clojure window to t
 
 We'll setup some keybindings in Sublime Text to make it easier to send code to the repl, run tests, etc.
 
-  * Append the [`clojure_keybindings.sublime-keymap`](clojure_keybindings.sublime-keymap) in this repo to `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Default (OSX).sublime-keymap`
+  * Append the [`clojure_keybindings.sublime-keymap`](clojure_keybindings.sublime-keymap) in this repo to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/Default (OSX).sublime-keymap`
     * Keymap files contain JSON so make sure they're valid when saving or Sublime Text will fail with errors.
 
 ##### Clojure Helpers
 
 The [`ClojureHelpers.py`](ClojureHelpers.py) file provides some helper functions that make working with Sublime REPL and Clojure a little better. These are associated with key bindings. You can also add your own helpers to this file.
 
-  * Copy `ClojureHelpers.py` to `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/`
-    * `cp ClojureHelpers.py ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/`
+  * Copy `ClojureHelpers.py` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
+    * `cp ClojureHelpers.py ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/`
 
 ##### Clojure Snippets
 
-Copy the file `clojure_snippets.sublime-snippet` to `~/Library/Application\ Support/Sublime\ Text\ 2/Packages/User/clojure_snippets.sublime-snippet`. It contains some useful completions.
+Copy the file `clojure_snippets.sublime-snippet` to `~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User/clojure_snippets.sublime-snippet`. It contains some useful completions.
 
