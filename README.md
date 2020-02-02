@@ -9,7 +9,7 @@ Initially based on instructions here: https://gist.github.com/jamesmacaulay/5457
 
 ## Why Sublime Text?
 
-I have tested many others editors but always find myself returning to Sublime Text with SublimeREPL. And why is that? Even though its setup is hacky and is far from perfect, no other editor can match its raw speed and convenience of keybindings. As with many things, picking and setting up your code editor is more art than science and what works best for you is up to your specific tastes and requirements.
+I have tested many other code editors but always find myself returning to Sublime Text with SublimeREPL. And why is that? Even though its setup is hacky and is far from perfect, no other editor can match its raw speed and convenience of keybindings shortcuts. As with many things, picking and setting up your code editor is more art than science and what works best for you is up to your specific tastes and requirements.
 
 ## Prerequisites
 
