@@ -1,4 +1,4 @@
-*I no longer actively use or maintain this configuration. This still works but I encourage you to try my [Atom editor](https://atom.io) package [Proto REPL](https://github.com/jasongilman/proto-repl).*
+*NOTE: this is a fork of the original project, which has been updated to work with SUBLIME TEXT 3*
 
 
 SublimeClojureSetup
@@ -10,7 +10,7 @@ Initially based on instructions here: https://gist.github.com/jamesmacaulay/5457
 
 ## Prerequisites
 
-  * Sublime Text 2 (Not yet tested with Sublime Text 3)
+  * Sublime Text 3
   * Java
   * [Leiningen 2](http://leiningen.org/)
 
@@ -18,9 +18,9 @@ Initially based on instructions here: https://gist.github.com/jamesmacaulay/5457
 
 Install it then create `~/.lein/profiles.clj`. See [`profiles.clj`](profiles.clj) in this repo for contents.
 
-## Sublime Text 2 With Clojure
+## Sublime Text 3 With Clojure
 
-This documents how to setup Sublime Text 2 with Clojure. It uses the sublime text [package manager](https://sublime.wbond.net/installation#st2). Follow the installation instructions to install the package manager into Sublime Text 2.
+This documents how to setup Sublime Text 3 with Clojure. It uses the sublime text [package manager](https://sublime.wbond.net/installation#st2). Follow the installation instructions to install the package manager into Sublime Text 3.
 If you already have the package manager installed make sure all packages are up to date.
 
    * Bring up the command pallet - __cmd + shift + P__

@@ -149,13 +149,19 @@ class ListVarsWithDocsInSelectedNsCommand(text_transfer.ReplSend):
     external_id = repl_external_id(self)
     super( ListVarsWithDocsInSelectedNsCommand, self ).run(edit, external_id, text)
 
-# Loads the current file in the REPL by telling the REPL to load it using the complete path
-# This is much faster than the built in sublime repl command which copies the entire file into the
-# REPL.
+# Loads and switches to the ns of the current file in the REPL by telling the 
+# REPL to load it using the complete path.
+# This is much faster than the built in sublime repl command which copies the 
+# entire file into the REPL.
 class LoadFileInReplCommand(text_transfer.ReplTransferCurrent):
   def run(self, edit):
     form = "(load-file \"" + self.view.file_name() +"\")"
     self.view.window().run_command("run_command_in_repl", {"command": form})
+
+    ## Switch to the namespace of the current file 
+    ns = re.sub("ns\s*", "", self.view.substr(self.view.find("ns\s*\S+",0)))
+    form2 = "(in-ns '" + ns + ")"
+    self.view.window().run_command("run_command_in_repl", {"command": form2})
 
 # Writes the selected text to a temporary file then tells the REPL to load that file.
 # This is much faster than copying every character to the REPL individually which echos everything.
