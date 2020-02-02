@@ -1,12 +1,15 @@
 *NOTE: this is a fork of the original project, which has been updated to work with SUBLIME TEXT 3*
 
-
 SublimeClojureSetup
 ===================
 
 A description of how I setup Sublime Text for Clojure development. It's a bit hacky but it works if you prefer to use Sublime Text for your editing. This is specific to my own workflow on a Mac but should be mostly applicable to development on other platforms with Sublime Text.
 
 Initially based on instructions here: https://gist.github.com/jamesmacaulay/5457344
+
+## Why Sublime Text?
+
+I have tested many others editors but always find myself returning to Sublime Text with SublimeREPL. And why is that? Even though its setup is hacky and is far from perfect, no other editor can match its raw speed and convenience of keybindings. As with many things, picking and setting up your code editor is more art than science and what works best for you is up to your specific tastes and requirements.
 
 ## Prerequisites
 
@@ -40,6 +43,8 @@ The Sublime REPL is used to open a REPL within Sublime Text. It can be opened by
   * Alternately it can be opened with the key combination __alt + super + l__.
 
 __Very Important__: Most of the time you'll want a REPL open for the current project. Sublime REPL only knows to connect the REPL to the current project if you start the REPL with a Clojure file open in the project and your cursor is in it.
+
+Alternatively, if you wish to run the REPL with clj deps, you'll need to  to open the SublimeREPL package and update the contents of `config/Clojure/Default.sublime-commands` and `config/Clojure/Main.sublime-menu` according to this [pull request](https://github.com/wuub/SublimeREPL/pull/537/commits/47bad8803f7eb6a3050ece1e88ea8b37f8e0947e#diff-c699bfc1a6f163eadf899a507a7fcfe4).
 
 
 #### Keybindings
