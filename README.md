@@ -44,7 +44,7 @@ The Sublime REPL is used to open a REPL within Sublime Text. It can be opened by
 
 __Very Important__: Most of the time you'll want a REPL open for the current project. Sublime REPL only knows to connect the REPL to the current project if you start the REPL with a Clojure file open in the project and your cursor is in it.
 
-Alternatively, if you wish to run the REPL with clj deps, you'll need to  to open the SublimeREPL package (`~/Library/Application\ Support/Sublime\ Text\ 3/Packages/SublimeREPL` in OSX, `~/config/sublime-text-3/Packages/SublimeREPL` in Ubuntu) and update the contents of `config/Clojure/Default.sublime-commands` and `config/Clojure/Main.sublime-menu` according to this [pull request](https://github.com/wuub/SublimeREPL/pull/537/commits/47bad8803f7eb6a3050ece1e88ea8b37f8e0947e#diff-c699bfc1a6f163eadf899a507a7fcfe4). Then, 
+Alternatively, if you wish to run the REPL with clj deps, you'll need to  to open the SublimeREPL package (`~/Library/Application\ Support/Sublime\ Text\ 3/Packages/SublimeREPL` in OSX, `~/.config/sublime-text-3/Packages/SublimeREPL` in Ubuntu) and update the contents of `config/Clojure/Default.sublime-commands` and `config/Clojure/Main.sublime-menu` according to this [pull request](https://github.com/wuub/SublimeREPL/pull/537/commits/47bad8803f7eb6a3050ece1e88ea8b37f8e0947e#diff-c699bfc1a6f163eadf899a507a7fcfe4). Then, 
 
   * Invoke the command pallet - __cmd + shift + P__
   * Type `repl` and select __SublimeREPL: Clj__
